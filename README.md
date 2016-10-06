@@ -1,0 +1,1 @@
+This is a simple nodejs app created to demonstrate the cool features of Azure Web Apps
