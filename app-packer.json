@@ -44,7 +44,7 @@
   },
   {
       "type": "ansible-local",
-      "playbook_file": "./nodeplaybook.yml"
+      "playbook_file": "./app-provisioner-ansible-playbook.yml"
   },
   {
     "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",

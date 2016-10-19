@@ -32,13 +32,11 @@
     register: git_finished
 
   - name: Running NPM install
-    npm: path={{homeDir}}/{{appDir}}/backened
+    npm: path={{homeDir}}/{{appDir}}
     register: npm_finished
     when: git_finished.changed
 
-  - name: Stop APP
-    command: pm2 stop app chdir={{homeDir}}/{{appDir}}
-    ignore_errors: yes
+
 
   - name: Start APP
     command: pm2 start server.js --name app chdir={{homeDir}}/{{appDir}}
